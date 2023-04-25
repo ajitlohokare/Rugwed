@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Expense Tracker</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/" >Expense Tracker</a>
+      
+    </div>
+</nav>
+<br />
+<br />
+<br />
+<div class="container">
+    <div class="row col-md-8 offset-md-2">
+        <div class="card">
+            
+            <div class="card-header">
+                <h2 class="text-center">Add Expense Details</h2>
+            </div>
+            <div class="card-body">
+                <form method="post" th:action="@{/save}" >
+
+                 <div class="form-group">
+							<label>Enter Expense Name</label><input type="text"
+								class="form-control" name="expensename" placeholder="Expense name">
+						</div>
+						<br>
+						
+						<div class="form-group">
+							<label>Enter Amount</label><input type="text"
+								class="form-control" name="amount" placeholder="Amount">
+						</div>
+												<br>
+						
+							<div class="form-group">
+							<label>Enter Note (Optional)</label><input type="text"
+								class="form-control" name="note" placeholder="Description">
+						</div>
+				
+						<br>
+						<div class="form-group">
+							<label>Enter Date </label><input type="date"
+								class="form-control" name="date" >
+						</div>
+						<br>
+                    <div class="form-group mb-3">
+                       <center> <button class="btn btn-primary" style="background-color:green" type="submit">Submit</button>
+                               <a class="btn btn-primary"  href="/expenses" >Back</a>
+                       </center>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
